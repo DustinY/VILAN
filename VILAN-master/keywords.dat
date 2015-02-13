@@ -1,0 +1,26 @@
+# Open Google Chrome
+open
+
+# Google Search
+search
+
+# Select a search result
+select
+
+# Go back a page
+back
+
+# Go forward a page
+forward
+
+# Bookmark a page
+bookmark
+
+# Exit Google Chrome
+exit
+
+# Pause Listening
+pause
+
+# Go to a website
+go to

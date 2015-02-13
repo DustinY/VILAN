@@ -21,3 +21,6 @@ exit
 
 # Pause Listening
 pause
+
+# Go to a website
+go to

@@ -1,9 +1,11 @@
 from dragonfly import *
 import pythoncom
-#import win32com.client
+import win32com.client
 import time
 
-#newshell = win32com.client.Dispatch("WScript.Shell")
+newshell = win32com.client.Dispatch("WScript.Shell")
+#newshell.Run("http://chrome://bookmarks")
+
 
 continueLoop = True
 #Class for creating the open rules
@@ -24,20 +26,26 @@ class OpenRule(CompoundRule):
 		"email":"www.gmail.com",
 		"the mail":"www.gmail.com",
 		"gmail":"www.gmail.com",
-		"bookmarks":"http://chrome://bookmarks"
+		"bookmarks":"bookmarks"
 		}
 		)
 		]
 	def _process_recognition(self, node, extras):
 		chosen = extras["option"]
-		shell = Key("w-r")
-		shell.execute()
-		time.sleep(.1)
-		shell = Text(chosen)
-		shell.execute()
-		time.sleep(.1)
-		shell = Key("enter")
-		shell.execute()
+		if (chosen == "bookmarks"):
+			BringApp("chrome").execute()
+			time.sleep(.1)
+			shell = key(cs-o)
+			shell.execute()
+		else:
+			shell = Key("w-r")
+			shell.execute()
+			time.sleep(.1)
+			shell = Text(chosen)
+			shell.execute()
+			time.sleep(.1)
+			shell = Key("enter")
+			shell.execute()
 
 rule = OpenRule()
 grammar.add_rule(rule)
@@ -87,6 +95,22 @@ class CloseNavigate(CompoundRule):
 		shell.execute()
 
 rule = CloseNavigate()
+grammar.add_rule(rule)
+
+class TabNavigate(CompoundRule):
+	spec = "tab <option>"
+	extras = [Choice("option", {
+		"right":"c-tab",
+		"left":"cs-tab"
+		}
+		)
+		]
+	def _process_recognition(self, node, extras):
+		chosen = extras["option"]
+		shell = Key(chosen)
+		shell.execute()
+
+rule = TabNavigate()
 grammar.add_rule(rule)
 
 class TurnoffRule(CompoundRule):

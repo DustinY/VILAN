@@ -1,1 +1,1 @@
-taskkill /f /im sapisvr.exe
+runas /user:Administrator "taskkill /f /im sapisvr.exe"

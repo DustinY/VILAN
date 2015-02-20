@@ -1,9 +1,9 @@
 from dragonfly import *
 import pythoncom
-import win32com.client
+#import win32com.client
 import time
 
-newshell = win32com.client.Dispatch("WScript.Shell")
+#newshell = win32com.client.Dispatch("WScript.Shell")
 
 continueLoop = True
 #Class for creating the open rules
@@ -13,7 +13,7 @@ from dragonfly.engines.backend_sapi5.engine import Sapi5InProcEngine
 engine = Sapi5InProcEngine()
 engine.connect()
 
-newshell.Run("endSpeechThing.bat")
+#newshell.Run("endSpeechThing.bat")
 
 
 class OpenRule(CompoundRule):
@@ -31,8 +31,10 @@ class OpenRule(CompoundRule):
 		chosen = extras["option"]
 		shell = Key("w-r")
 		shell.execute()
+		time.sleep(.1)
 		shell = Text(chosen)
 		shell.execute()
+		time.sleep(.1)
 		shell = Key("enter")
 		shell.execute()
 
@@ -85,7 +87,7 @@ class TurnoffRule(CompoundRule):
 rule = TurnoffRule()
 grammar.add_rule(rule)
 engine._load_grammar(grammar)
-newshell.Run("speechexit")
+#newshell.Run("speechexit")
 
 
 #def response(phrase, listenter):
@@ -94,5 +96,5 @@ newshell.Run("speechexit")
 
 while continueLoop:
 	pythoncom.PumpWaitingMessages()
-	print "Waiting"
+	#print "Waiting"
 	time.sleep(.1)

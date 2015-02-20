@@ -4,7 +4,10 @@ import win32com.client
 import time
 
 newshell = win32com.client.Dispatch("WScript.Shell")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 continueLoop = True
 #Class for creating the open rules
 grammar = Grammar("test grammar")
@@ -12,6 +15,11 @@ from dragonfly.engines.backend_sapi5.engine import Sapi5InProcEngine
 
 engine = Sapi5InProcEngine()
 engine.connect()
+<<<<<<< HEAD
+=======
+newshell.Run("endSpeechThing.bat")
+
+>>>>>>> origin/master
 class OpenRule(CompoundRule):
 	spec = "open <option>"
 	extras = [Choice("option", {

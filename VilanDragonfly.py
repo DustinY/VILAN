@@ -23,7 +23,8 @@ class OpenRule(CompoundRule):
 		"browser":"chrome",
 		"email":"www.gmail.com",
 		"the mail":"www.gmail.com",
-		"gmail":"www.gmail.com"
+		"gmail":"www.gmail.com",
+		"bookmarks":"http://chrome://bookmarks"
 		}
 		)
 		]
@@ -69,6 +70,23 @@ class BrowserNavigate(CompoundRule):
 			shell.execute()
 
 rule = BrowserNavigate()
+grammar.add_rule(rule)
+
+class CloseNavigate(CompoundRule):
+	spec = "close <option>"
+	extras = [Choice("option", {
+		"tab":"c-w",
+		"chrome":"a-f4",
+		"browser":"a-f4"
+		}
+		)
+		]
+	def _process_recognition(self, node, extras):
+		chosen = extras["option"]
+		shell = Key(chosen)
+		shell.execute()
+
+rule = CloseNavigate()
 grammar.add_rule(rule)
 
 class TurnoffRule(CompoundRule):

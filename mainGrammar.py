@@ -163,7 +163,8 @@ grammar.add_rule(rule)
 class loadGrammar(CompoundRule):
 	spec = "load <option>"
 	extras = [Choice("option", {
-		"gmail grammar" : "gmail"}
+		"gmail grammar" : "gmail",
+		"bookmark grammar" : "bookmark"}
 		)
 	]
 	def _process_recognition(self, node, extras):
@@ -171,7 +172,9 @@ class loadGrammar(CompoundRule):
 		if extras["option"] == "gmail":
 			grammar.disable()
 			gmailGrammar.enable()
-			
+		elif extras["option"] == "bookmark"
+			grammar.disable()
+			bookmarkGrammar.enable()
 #newshell.Run("speechexit")
 
 

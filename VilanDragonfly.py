@@ -7,6 +7,7 @@ from vilanGrammars import *
 from mainGrammar import *
 from gmailGrammar import *
 from bookmarkGrammar import *
+from pauseGrammar import *
 
 newshell = win32com.client.Dispatch("WScript.Shell")
 #newshell.Run("http://chrome://bookmarks")
@@ -25,8 +26,10 @@ engine.connect()
 engine._load_grammar(grammar)
 engine._load_grammar(gmailGrammar)
 engine._load_grammar(bookmarkGrammar)
+engine._load_grammar(pauseGrammar)
 gmailGrammar.disable()
 bookmarkGrammar.disable()
+pauseGrammar.disable()
 #grammar.enable()
 
 while continueLoop:

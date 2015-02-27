@@ -144,20 +144,23 @@ class TabNavigate(CompoundRule):
 rule = TabNavigate()
 grammar.add_rule(rule)
 
-class TurnoffRule(CompoundRule):
-	spec = "turn <option>"
+class stopRule(CompoundRule):
+	spec = "stop <option>"
 	extras = [Choice("option", {
-		"off":"off",
-		"on":"on"}
+		"listening":"listening",
+		"program":"program"}
 		)
 		]
 	def _process_recognition(self, node, extras):
 		chosen = extras["option"]
-		if chosen == "off":
-			self.loopStatus = "off"
+		if chosen == "listening":
+			grammar.disable()
+			pauseGrammar.enable()
+		elif chosen == "program":
+			print "Closing Program"
 
 
-rule = TurnoffRule()
+rule = stopRule()
 grammar.add_rule(rule)
 
 class loadGrammar(CompoundRule):
@@ -172,7 +175,7 @@ class loadGrammar(CompoundRule):
 		if extras["option"] == "gmail":
 			grammar.disable()
 			gmailGrammar.enable()
-		elif extras["option"] == "bookmark"
+		elif extras["option"] == "bookmark":
 			grammar.disable()
 			bookmarkGrammar.enable()
 #newshell.Run("speechexit")

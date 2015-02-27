@@ -4,26 +4,18 @@ import win32com.client
 import time
 from vilanGrammars import *
 
-class mainRule(MappingRule):
-	mapping = {
-	}
-	extras = [
-		]
-		
 class grammarRule(CompoundRule):
-	spec = "disable <option>"
+	spec = "start <option>"
 	extras = [Choice("option",{
-		"grammar": "bookmark"
+		"listening": "start"
 		}
 		)
 		]
 	def _proccess_recognition(self, noe, extras):
 		chosen = extras["option"]
-		if(chosen == "bookmark"):
-			bookmarkGrammar.disable()
+		if(chosen == "start"):
+			pauseGrammar.disable()
 			grammar.enable()
 			
-rule = mainRule()
-bookmarkGrammar.add_rule(rule)
 rule = grammarRule()
-bookmarkGrammar-add_rule(rule)
+pauseGrammar.add_rule(rule)

@@ -64,7 +64,6 @@ class BrowserNavigate(CompoundRule):
 		"to the next page":"f",
 		"forwards":"f",
 		"backwards":"b",
-		"backward":"b",
 		"back":"b",
 		"previous page":"b",
 		"to previous page":"b",

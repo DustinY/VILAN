@@ -1,0 +1,55 @@
+Vilan Commands
+
+open chrome				- Opens Google Chrome
+open browser			- Opens Google Chrome
+
+open email				- Opens www.gmail.com
+open the mail			- Opens www.gmail.com
+open gmail				- Opens www.gmail.com
+
+open Bookmarks			- Opens the Browser's Bookmark page
+open Last Tab			- Opens the last Closed Tab
+open history			- Opens the Browser's History page
+open downloads			- Opens the Browser's Downloads page
+
+go forward				- Goes to the next page
+go front				- Goes to the next page
+go next page			- Goes to the next page
+go to next page			- Goes to the next page
+go to the next page		- Goes to the next page
+go forwards				- Goes to the next page
+
+go backwards			- Goes to the last page
+go back					- Goes to the last page
+go previous page		- Goes to the last page
+go to the previous page	- Goes to the last page
+
+go home					- Goes to the Browser's home page
+go to the home page		- Goes to the Browser's Home page
+
+go to top				- Goes to the top of the page
+go to bottom			- Goes to the bottom of the page
+
+close tab				- Closes current Tab
+close chrome			- Closes current Window
+close browser			- Closes current Window
+
+search [for] <option>	- Searches Google for <option>
+
+tab right				- Switches to Right Tab
+tab left				- Switches to Left Tab
+tab 1-8					- Switches to Specific Tab number
+
+turn off				- Turns off Listener
+turn on					- Turns on Listener
+
+load gmail grammar		- Switches to grammar meant for www.gmail.com
+
+
+
+Gmail Grammar
+
+compose [new] [mail]	- Opens window to Compose a new Email
+email <recipient>		- Opens window to Compose a new Email to <recipient>
+type <text>				- Types <text>
+disable grammar			- Switches back to main grammar

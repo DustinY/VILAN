@@ -4,12 +4,6 @@ import win32com.client
 import time
 from vilanGrammars import *
 
-class mainRule(MappingRule):
-	mapping = {
-	}
-	extras = [
-		]
-		
 class grammarRule(CompoundRule):
 	spec = "disable <option>"
 	extras = [Choice("option",{
@@ -22,8 +16,6 @@ class grammarRule(CompoundRule):
 		if(chosen == "bookmark"):
 			bookmarkGrammar.disable()
 			grammar.enable()
-			
-rule = mainRule()
-bookmarkGrammar.add_rule(rule)
+
 rule = grammarRule()
 bookmarkGrammar.add_rule(rule)

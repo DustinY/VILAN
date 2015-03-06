@@ -64,6 +64,7 @@ class BrowserNavigate(CompoundRule):
 		"to the next page":"f",
 		"forwards":"f",
 		"backwards":"b",
+		"backward":"b",
 		"back":"b",
 		"previous page":"b",
 		"to previous page":"b",
@@ -144,40 +145,22 @@ class TabNavigate(CompoundRule):
 rule = TabNavigate()
 grammar.add_rule(rule)
 
-class stopRule(CompoundRule):
-	spec = "stop <option>"
+class TurnoffRule(CompoundRule):
+	spec = "turn <option>"
 	extras = [Choice("option", {
-		"listening":"listening",
-		"program":"program"}
+		"off":"off",
+		"on":"on"}
 		)
 		]
 	def _process_recognition(self, node, extras):
 		chosen = extras["option"]
-		if chosen == "listening":
-			grammar.disable()
-			pauseGrammar.enable()
-		elif chosen == "program":
-			print "Closing Program"
+		if chosen == "off":
+			self.loopStatus = "off"
 
 
-rule = stopRule()
+rule = TurnoffRule()
 grammar.add_rule(rule)
 
-class loadGrammar(CompoundRule):
-	spec = "load <option>"
-	extras = [Choice("option", {
-		"gmail grammar" : "gmail",
-		"bookmark grammar" : "bookmark"}
-		)
-	]
-	def _process_recognition(self, node, extras):
-		
-		if extras["option"] == "gmail":
-			grammar.disable()
-			gmailGrammar.enable()
-		elif extras["option"] == "bookmark":
-			grammar.disable()
-			bookmarkGrammar.enable()
 #newshell.Run("speechexit")
 
 

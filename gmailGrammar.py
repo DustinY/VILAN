@@ -49,9 +49,11 @@ class mainRule(MappingRule):
 		"mark [as] unread" : Key("s-u"),
 		"undo" : Key("z"),
 		"archive current [e-mail]" : Key("rbracket"),
-		
-		
-		
+		"open chat" : Key("q"),
+		"chat with <person>" : Key("q") + Text("%(person)s\n"),
+		"update" : Key("s-n"),
+		"remove" : Key("y"),
+#		"folder options" : Mouse("(0,1)") + Mouse("<100,-100>, left"),
 	}
 	extras = [
 			Dictation("recipient"),
@@ -59,22 +61,8 @@ class mainRule(MappingRule):
 			Dictation("option"),
 			Dictation("sender"),
 			Dictation("label"),
+			Dictation("person"),
 		]
 		
-class grammarRule(CompoundRule):
-	spec = "disable <option>"
-	extras = [Choice("option",{
-		"gmail grammar": "gmail"
-		}
-		)
-		]
-	def _proccess_recogntion(self, noe, extras):
-		chosen = extras["option"]
-		if(chosen == "gmail"):
-			gmailGrammar.disable()
-			grammar.enable()
-
 rule = mainRule()
-gmailGrammar.add_rule(rule)
-rule = grammarRule()
 gmailGrammar.add_rule(rule)

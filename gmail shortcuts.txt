@@ -1,0 +1,66 @@
+Cntrl + Enter (send Message) (after composing, send message)
+Cntrl + .	  (Advance to next window) (goes to next chat or compose windows)
+Cntrl + Shift + c (add Cc recipients) (while composing)
+Cntrl + Shift + b (add Bcc recipients) (while composing)
+Cntrl + Shift + f (change fromaddress) (while composing)
+Shift + Esc	  (Focus main windows) (move cursor to main windows)
+
+	After enabling keyboard shortcuts
+c (compose)
+d (compose in new tab)
+/ (search in searchbox)
+k (move to newer conversation)
+j (move to older conversation)
+n (move to newer message in 'Conversation view')
+p (move to older message in 'Conversation view')
+` (go to next inbox section)
+~ (go to previous inbox section)
+o or Enter (open)
+u (return to conversation list/ refreshes your page)
+e (archive conversation from any view)
+m (mute)
+x (select conversation)
+s (star a message or conversation)
++ (mark as important)
+- (mark as unimportant)
+! (mark as spam/report spam)
+r (reply while in message)
+Shift + r (reply in new tab)
+a (reply all)
+Shift + a (reply in new tab)
+f (fowards message)
+Shift + f (fowards in new tab)
+Esc (Escape an input field)
+Cntrl + S (save draft)
+# (delete conversation)
+l (opens label menu)
+v (move the label to a different label)
+Shift + i (mark as read)
+Shift + u (mark as unread)
+[ (removes the current view and moves to an older one)
+] (removes the current view and moves to a newer one)
+{ (Archives the current and moves to older)
+} (Archives th ecurrent and moves to newer)
+z (undo previous action)
+Shift + n (updates current conversation)
+q (moves cursor to chat search)
+y (remove from current view "From inbox means archive" "From starred means unstar" "from Trash means move to inbox" "from label means remove label")
+. (displas more action drop-down menu)
+, (moves the cursor to the first button in your Gmail toolbar)
+
+Combo-keys
+Tab then Enter	Send message	After composing your message, use this combination to send it.
+y then o	Archive and next	Archives your conversation and moves to the next one.
+g then a	Go to 'All Mail'	Takes you to 'All Mail,' the storage site for all mail you've ever sent or received (and have not deleted).
+g then s	Go to 'Starred'	Takes you to all conversations you have starred.
+g then c	Go to 'Contacts'	Takes you to your Contacts list.
+g then d	Go to 'Drafts'	Takes you to all drafts you have saved.
+g then l	Go to 'Label'	Takes you to the search box with the "label:" operator filled in for you.
+g then i	Go to 'Inbox'	Returns you to the inbox.
+g then t	Go to 'Sent Mail'	Takes you to all mail you've sent.
+* then a	Select all	Selects all mail.
+* then n	Select none	Deselects all mail.
+* then r	Select read	Selects all mail you've read.
+* then u	Select unread	Selects all unread mail.
+* then s	Select starred	Selects all starred mail.
+* then t	Select unstarred	Selects all unstarred mail.

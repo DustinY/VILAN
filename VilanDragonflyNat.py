@@ -14,16 +14,17 @@ newshell = win32com.client.Dispatch("WScript.Shell")
 continueLoop = True
 #Class for creating the open rules
 #grammar = Grammar("test grammar")
-from dragonfly.engines.backend_sapi5.engine import Sapi5InProcEngine
+from dragonfly.engines.backend_natlink.engine import *
 
-engine = Sapi5InProcEngine()
+engine = NatLinkEngine()
 engine.connect()
 #newshell.Run("endSpeechThing.bat")
 
 
 engine._load_grammar(grammar)
 engine._load_grammar(gmailGrammar)
-
+gmailGrammar.disable()
+#grammar.enable()
 
 while continueLoop:
 	pythoncom.PumpWaitingMessages()

@@ -1,3 +1,0 @@
-DELETE BOOKMARK : cntrl + shift + O (cs-o); search bookmark name; 4 tabs; down key; delete
-
-add engines for commands: bookmark

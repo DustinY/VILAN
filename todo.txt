@@ -1,0 +1,10 @@
+DELETE BOOKMARK : cntrl + shift + O (cs-o); search bookmark name; 4 tabs; down key; delete
+
+- Dragonfly Contexts instead of selectively disabling grammars
+- Improve Speech recognition
+- .dat/.txt files -> Local MongoDB
+  - Add Mongo connection to Qt interface & Python program
+- Build release exec in Qt
+- Documentation doc
+- PPT Presentation
+- Rehearse Presentation (After Guo final)

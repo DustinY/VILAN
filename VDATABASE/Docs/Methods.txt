@@ -1,0 +1,41 @@
+open chrome				
+open browser			
+open email				
+open the mail			
+open gmail				
+open Bookmarks			
+open Last Tab			
+open history			
+open downloads				
+go front				
+go next page			
+go to next page			
+go to the next page		
+go forwards				
+go backwards			
+go back					
+go previous page		
+go to the previous page	
+go home					
+go to the home page		
+go to top				
+go to bottom			
+close tab				
+close chrome			
+close browser			
+search [for] <option>	
+tab right				
+tab left				
+tab 1-8					
+turn off				
+turn on					
+load gmail grammar		
+compose [new] [mail]	
+email <recipient>		
+type <text>				
+disable grammar			
+
+
+
+chrome, www.google.com
+

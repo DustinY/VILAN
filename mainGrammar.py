@@ -146,17 +146,11 @@ rule = TabNavigate()
 grammar.add_rule(rule)
 
 class TurnoffRule(CompoundRule):
-	spec = "turn <option>"
-	extras = [Choice("option", {
-		"off":"off",
-		"on":"on"}
-		)
-		]
+	spec = "turn off"
+	extras = None
 	def _process_recognition(self, node, extras):
-		chosen = extras["option"]
-		if chosen == "off":
-			self.loopStatus = "off"
-
+		grammar.disable()
+		stopGrammar.enable()
 
 rule = TurnoffRule()
 grammar.add_rule(rule)

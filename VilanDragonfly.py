@@ -23,9 +23,30 @@ engine.connect()
 
 engine._load_grammar(grammar)
 engine._load_grammar(gmailGrammar)
+engine._load_grammar(bookmarkGrammar)
+
+
+grammar.enable()
+gmailGrammar.disable()
+bookmarkGrammar.disable()
+def grammarActivation():
+	window = Window.get_foreground()
+    if window.executable == "chrome" & window.title == "@gmail.com - Gmail":
+		gmailGrammar.enable()
+		bookmarkGrammar.disable()
+		grammar.disable()
+	elif window.executable == "chrome" & window.title == "Bookmark Manager":
+		bookmarkGrammar.enable()
+		gmailGrammar.disable()
+		grammar.disable()
+	else:
+		bookmarkGrammar.disable()
+		gmailGrammar.disable()
+		grammar.enable()
+	#self.grammar.process_begin(window.executable, window.title, window.handle)
 
 
 while continueLoop:
 	pythoncom.PumpWaitingMessages()
-	#print "Waiting"
 	time.sleep(.1)
+	grammarActivation()

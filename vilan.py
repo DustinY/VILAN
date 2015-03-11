@@ -1,35 +1,64 @@
-import speech
+from dragonfly import *
+import pythoncom
 import win32com.client
 import time
+from vilanGrammars import *
+from mainGrammar import *
+from gmailGrammar import *
+from bookmarkGrammar import *
+from stopGrammar import *
+from allGrammar import *
+from dragonfly.engines.backend_sapi5.engine import Sapi5InProcEngine
 
-def response(phrase, listener):
-	print "You said %s" % phrase
-	if phrase.lower() == "turn off":
-		listener.stoplistening()
-	elif phrase.lower() == "open chrome" or phrase.lower() == "open browser":
-		shell = win32com.client.Dispatch("WScript.Shell")
-		shell.Run("chrome")
-	elif phrase.lower() == "add a bookmark" or phrase.lower() == "add a book mark":
-		shell = win32com.client.Dispatch("WScript.Shell")
-		shell.SendKeys("^d", 0)
-	elif phrase.lower() == "open e-mail" or phrase.lower == "open the mail":
-		shell = win32com.client.Dispatch("WScript.Shell")
-		shell.SendKeys("^l", 0)
-		time.sleep(1);
-		shell.SendKeys("gmail.com~", 0)
-	elif phrase.lower() == "go back" or phrase.lower() == "go backward":
-		shell = win32com.client.Dispatch("WScript.Shell")
-		shell.SendKeys("%{LEFT}", 0)
-	elif phrase.lower() == "go forward" or phrase.lower() == "go front":
-		shell = win32com.client.Dispatch("WScript.Shell")
-		shell.SendKeys("%{RIGHT}", 0)
-	elif phrase.lower() == "close browser" or phrase.lower() == "close chrome":
-		shell = win32com.client.Dispatch("WScript.Shell")
-		shell.SendKeys("%{F4}", 0)
+class Vilan():
+		engine = Sapi5InProcEngine()
+		engine.connect()
+		#loading grammars and creating wrappers
+		grammarWrapper = engine._load_grammar(grammar)
+		gmailGrammarWrapper = engine._load_grammar(gmailGrammar)
+		bookmarkGrammarWrapper = engine._load_grammar(bookmarkGrammar)
+		allGrammarWrapper = engine._load_grammar(allGrammar)
+		stopGrammarWrapper = engine._load_grammar(stopGrammar)
+		#unloading grammars for initial state
+		engine._unload_grammar(bookmarkGrammar, bookmarkGrammarWrapper)
+		engine._unload_grammar(gmailGrammer, gmailGrammarWrapper)
+		engine._unload_grammar(stopGrammar, stopGrammarWrapper)
+		#variable to end program
+		continueLoop = True
+		#function to automatically change grammars
+		def grammarActivation():
+			window = Window.get_foreground()
+			if window.executable == property(fget="chrome") and window.title == property(fget="@gmail.com - Gmail"):
+				engine._load_grammar(gmailGrammar)
+				engine._unload_grammar(bookmarkGrammar, bookmarkGrammarWrapper)
+				engine._unload_grammar(grammar, grammarWrapper)
+			elif window.executable == "chrome" and window.title == "Bookmark Manager":
+				engine._load_grammar(bookmarkGrammar)
+				engine._unload_grammar(gmailGrammar, gmailGrammarWrapper)
+				engine._unload_grammar(grammar, grammarWrapper)
+			else:
+				engine._unload_grammar(bookmarkGrammar, bookmarkGrammarWrapper)
+				engine._unload_grammar(gmailGrammar, gmailGrammarWrapper)
+				engine._load_grammar(grammar)
+				#self.grammar.process_begin(window.executable, window.title, window.handle)
 
-listener = speech.listenforanything(response)
+		def run():
+			while continueLoop:
+				grammarActivation()
+				pythoncom.PumpWaitingMessages()
+				continueLoop = loopCheck
 
-# Your program can do whatever it wants now, and when a spoken phrase is heard,
-# response() will be called on a separate thread.
-while listener.islistening():
-	time.sleep(1)
+start = Vilan()
+start.run()
+'''grammar.enable()
+gmailGrammar.disable()
+bookmarkGrammar.disable()
+allGrammar.enable()
+stopGrammar.disable()
+'''
+'''engine.activate_grammar(grammar)
+engine.deactivate_grammar(gmailGrammar)
+engine.deactivate_grammar(bookmarkGrammar)
+engine.activate_grammar(allGrammar)
+engine.deactivate_grammar(stopGrammar)
+'''

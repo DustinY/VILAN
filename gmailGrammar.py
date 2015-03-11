@@ -14,17 +14,12 @@ class mainRule(MappingRule):
 		"BCC" : Key("cs-b"),
 		"from <sender>" : Key("cs-f") + Text("%(sender)s\n"),
 		"focus main window" : Key("c-escape"),
-		"down" : Key("down"),
-		"up" : Key("up"),
-		"left" : Key("left"),
-		"right" : Key("right"),
 		"send [message]" : Key("c-enter"),
 		"next [e-mail]" : Key("k"),
 		"previous [e-mail]" : Key("j"),
 		"search <option>" : Key("slash") + Text("%(option)s\n"),
 		"tab [right]" : Key("backtick, down"),
 		"tab left" : Key("tilde, down"),
-		"enter" : Key("enter"),
 		"open" : Key("o"),
 		"archive" : Key("e"),
 		"return" : Key("u"),
@@ -53,7 +48,6 @@ class mainRule(MappingRule):
 		"chat with <person>" : Key("q") + Text("%(person)s\n"),
 		"update" : Key("s-n"),
 		"remove" : Key("y"),
-#		"folder options" : Mouse("(0,1)") + Mouse("<100,-100>, left"),
 	}
 	extras = [
 			Dictation("recipient"),
@@ -63,6 +57,6 @@ class mainRule(MappingRule):
 			Dictation("label"),
 			Dictation("person"),
 		]
-		
+
 rule = mainRule()
 gmailGrammar.add_rule(rule)

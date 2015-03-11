@@ -13,25 +13,11 @@ class mainRule(MappingRule):
 		"Bookmarks" : Mouse("(1.0,0.0)") + Mouse("<-95,97>, left") + Key("tab:4, down"),
 		"type <text>" : Text("%(text)s"),
 		"select" : Key("enter:2"),
-
+		"delete" : Key("delete"),
 	}
 	extras = [
 		Dictation("text"),
 	]
 
-		
-class grammarRule(CompoundRule):
-	spec = "disable <option>"
-	extras = [Choice("option",{
-		"grammar": "bookmark",
-		}
-		)
-		]
-	def _proccess_recognition(self, noe, extras):
-		chosen = extras["option"]
-		if(chosen == "bookmark"):
-			bookmarkGrammar.disable()
-			grammar.enable()
-
-rule = grammarRule()
+rule = mainRule()
 bookmarkGrammar.add_rule(rule)

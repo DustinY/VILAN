@@ -4,110 +4,32 @@ import win32com.client
 import time
 from vilanGrammars import *
 
-class OpenRule(CompoundRule):
-	spec = "open <option>"
-	extras = [Choice("option", {
-		"chrome":"chrome",
-		"browser":"chrome",
-		"email":"www.gmail.com",
-		"the mail":"www.gmail.com",
-		"gmail":"www.gmail.com",
-		"bookmarks":"bookmarks",
-		"last tab":"last",
-		"history":"history",
-		"downloads":"downloads"
-		}
-		)
-		]
-	def _process_recognition(self, node, extras):
-		chosen = extras["option"]
-		if (chosen == "bookmarks"):
-			BringApp("chrome").execute()
-			time.sleep(.1)
-			shell = Key("cs-o")
-			shell.execute()
-		elif (chosen == "last"):
-			BringApp("chrome").execute()
-			time.sleep(.1)
-			shell = Key("cs-t")
-			shell.execute()
-		elif (chosen == "history"):
-			BringApp("chrome").execute()
-			time.sleep(.1)
-			shell = Key("c-h")
-			shell.execute()
-		elif (chosen == "downloads"):
-			BringApp("chrome").execute()
-			time.sleep(.1)
-			shell = Key("c-j")
-			shell.execute()
-		else:
-			shell = Key("w-r")
-			shell.execute()
-			time.sleep(.1)
-			shell = Text(chosen)
-			shell.execute()
-			time.sleep(.1)
-			shell = Key("enter")
-			shell.execute()
+class browserNavigation(MappingRule):
+	mapping = {
+		"go forward" : Key("a-right"),
+		"go front" : Key("a-right"),
+		"go next page" : Key("a-right"),
+		"go to next page": Key("a-right"),
+		"go to the next page": Key("a-right"),
+		"go forwards": Key("a-right"),
+		"go backwards": Key("a-left"),
+		"go backward": Key("a-left"),
+		"go back": Key("a-left"),
+		"go previous page": Key("a-left"),
+		"go to previous page": Key("a-left"),
+		"go to the previous page": Key("a-left"),
+		"go home": Key("a-home"),
+		"go to home page": Key("a-home"),
+		"go to top": Key("home"),
+		"go to bottom": Key("end"),
+		"close tab" : Key("c-w"),
+		"close chrome" : Key("a-f4"),
+		"close browser": Key("a-f4"),
 
-rule = OpenRule()
+	}
+
+rule = browserNavigation()
 grammar.add_rule(rule)
-
-class BrowserNavigate(CompoundRule):
-	spec = "go <option>"
-	extras = [Choice("option", {
-		"forward":"f",
-		"front":"f",
-		"next page":"f",
-		"to next page":"f",
-		"to the next page":"f",
-		"forwards":"f",
-		"backwards":"b",
-		"backward":"b",
-		"back":"b",
-		"previous page":"b",
-		"to previous page":"b",
-		"to the previous page":"b",
-		"home":"a-home",
-		"to home page":"a-home",
-		"to top":"home",
-		"to bottom":"end"
-		}
-		)
-		]
-	def _process_recognition(self, node, extras):
-		chosen = extras["option"]
-		if(chosen == "f"):
-			shell = Key("a-right")
-			shell.execute()
-		elif(chosen == "b"):
-			shell = Key("a-left")
-			shell.execute()
-		else:
-			shell = Key(chosen)
-			shell.execute()
-
-rule = BrowserNavigate()
-grammar.add_rule(rule)
-
-class CloseNavigate(CompoundRule):
-	spec = "close <option>"
-	extras = [Choice("option", {
-		"tab":"c-w",
-		"chrome":"a-f4",
-		"browser":"a-f4"
-		}
-		)
-		]
-	def _process_recognition(self, node, extras):
-		chosen = extras["option"]
-		shell = Key(chosen)
-		shell.execute()
-
-rule = CloseNavigate()
-grammar.add_rule(rule)
-
 
 class SearchNavigate(MappingRule):
 	mapping = {
@@ -144,19 +66,3 @@ class TabNavigate(CompoundRule):
 
 rule = TabNavigate()
 grammar.add_rule(rule)
-
-class TurnoffRule(CompoundRule):
-	spec = "turn off"
-	extras = None
-	def _process_recognition(self, node, extras):
-		grammar.disable()
-		stopGrammar.enable()
-
-rule = TurnoffRule()
-grammar.add_rule(rule)
-
-#newshell.Run("speechexit")
-
-
-#def response(phrase, listenter):
-#	print "You said %s" % phrase

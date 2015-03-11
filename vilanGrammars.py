@@ -1,8 +1,10 @@
 from dragonfly import *
 
-gmailContext = AppContext(executable="chrome", title="@gmail.com - Gmail")
-bookmarkContext = AppContext(executable="chrome", title="Bookmark Manager")
-mainContext = ~gmailContext
-
-grammar = Grammar("Main Grammar", context=mainContext)
-gmailGrammar = Grammar("Gmail Grammar", context=gmailContext)
+#gmailContext = AppContext(executable="chrome", title="@gmail.com - Gmail")
+#bookmarkContext = AppContext(executable="chrome", title="Bookmark Manager")
+#mainContext = ~gmailContext
+allGrammar = Grammar("All Grammar")
+grammar = Grammar("Main Grammar")
+gmailGrammar = Grammar("Gmail Grammar")
+bookmarkGrammar = Grammar("Bookmark Grammar")
+stopGrammar = Grammar("Stop Grammar")

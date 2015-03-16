@@ -7,7 +7,7 @@ def create_dict_from_file(filename):
 		if s and not s.startswith("#"):
 			key, value = s.split(",")
 			dict[key] = value
-	
+
 	return dict
 
 programs = create_dict_from_file("programs.dat")
@@ -17,7 +17,7 @@ websites = create_dict_from_file("websites.dat")
 # 'program' is the program name as said by the user
 def open(program=None):
 	recognized = False
-	
+
 	for p in programs.keys():
 		if program == p:
 			print "success -", programs[p]
@@ -28,7 +28,7 @@ def open(program=None):
 
 def go_to(website=None):
 	recognized = False
-	
+
 	for w in websites.keys():
 		if website == w:
 			print "going to...", websites[w]

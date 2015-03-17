@@ -42,7 +42,7 @@ rule = mainRule()
 customGrammar.add_rule(rule)
 
 def lastMod():
-    newDateLastMod = time.ctime(os.path.getmtime("dateModTestFile.txt"))
+    newDateLastMod = time.ctime(os.path.getmtime("customCommands.dat"))
 
 	if newDateLastMod is not dateLastMod:
 		customCommands = create_dict_from_file("customCommands.dat")

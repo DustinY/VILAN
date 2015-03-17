@@ -4,6 +4,9 @@ import win32com.client
 import time
 from vilanGrammars import *
 
+import os.path, time
+import threading
+
 def create_dict_from_file(filename):
 	dict = {}
 	f = open(filename)
@@ -16,6 +19,7 @@ def create_dict_from_file(filename):
 
 	return dict
 
+datelastMod = time.ctime(os.path.getmtime("customCommands.dat"))
 customCommands = create_dict_from_file("customCommands.dat")
 
 class mainRule(CompoundRule):
@@ -36,3 +40,15 @@ class mainRule(CompoundRule):
 
 rule = mainRule()
 customGrammar.add_rule(rule)
+
+def lastMod():
+    newDateLastMod = time.ctime(os.path.getmtime("dateModTestFile.txt"))
+
+	if newDateLastMod is not dateLastMod:
+		customCommands = create_dict_from_file("customCommands.dat")
+		rule = mainRule()
+		customGrammar.add_rule(rule)
+
+    threading.Timer(5, lastMod).start()
+
+lastMod()

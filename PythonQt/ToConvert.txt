@@ -1,0 +1,6 @@
+about
+dialog
+display
+mainmenu
+modify
+search

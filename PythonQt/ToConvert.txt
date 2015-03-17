@@ -3,4 +3,3 @@ dialog
 display
 mainmenu
 modify
-search

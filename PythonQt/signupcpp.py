@@ -52,3 +52,8 @@ class SignUp(QtWidgets.QDialog, Ui_SignUp) :
     #start on_pushButton_2_clicked
     def on_pushButton_2_clicked(self) :
         self.hide()
+        print ("hello")
+
+#test = SignUp()
+#test.show()
+#app.exec_()

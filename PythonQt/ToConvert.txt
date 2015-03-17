@@ -1,5 +1,2 @@
-about
 dialog
 display
-mainmenu
-modify

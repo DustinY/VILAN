@@ -8,47 +8,65 @@ import os.path, time
 import threading
 
 def create_dict_from_file(filename):
-	dict = {}
-	f = open(filename)
+    dict = {}
+    f = open(filename)
 
-	for line in f:
-		s = line.rstrip()
-		if s and not s.startswith("#"):
-			key, value = s.split(",")
-			dict[key] = value
+    for line in f:
+        s = line.rstrip()
+        if s and not s.startswith("#"):
+            key, value = s.split(",")
+            dict[key] = value
 
-	return dict
+    return dict
 
-datelastMod = time.ctime(os.path.getmtime("customCommands.dat"))
-customCommands = create_dict_from_file("customCommands.dat")
+#datelastMod = time.ctime(os.path.getmtime("C:\Users\Dustin\Documents\GitHub\VILAN\customCommands.dat"))
+#customCommands = create_dict_from_file("C:\Users\Dustin\Documents\GitHub\VILAN\customCommands.dat")
 
-class mainRule(CompoundRule):
-	spec = "open <option>"
-	extras = [Choice("option", customCommands)]
+'''class mainRule(CompoundRule):
+    spec = "open <option>"
+    extras = [Choice("option", customCommands)]
 
-	def _process_recognition(self, node, extras):
-		chosen = extras["option"]
+    def _process_recognition(self, node, extras):
+        chosen = extras["option"]
 
-		shell = Key("w-r")
-		shell.execute()
-		time.sleep(.1)
-		shell = Text(chosen)
-		shell.execute()
-		time.sleep(.1)
-		shell = Key("enter")
-		shell.execute()
-
-rule = mainRule()
-customGrammar.add_rule(rule)
+        shell = Key("w-r")
+        shell.execute()
+        time.sleep(.1)
+        shell = Text(chosen)
+        shell.execute()
+        time.sleep(.1)
+        shell = Key("enter")
+        shell.execute()
+'''
+#customRule
+#customGrammar.add_rule(customRule)
 
 def lastMod():
-    newDateLastMod = time.ctime(os.path.getmtime("customCommands.dat"))
+    customCommands = create_dict_from_file("C:\Users\Dustin\Documents\GitHub\VILAN\customCommands.dat")
+    class mainRule(CompoundRule):
+        spec = "open <option>"
+        extras = [Choice("option", customCommands)]
 
-	if newDateLastMod is not dateLastMod:
-		customCommands = create_dict_from_file("customCommands.dat")
-		rule = mainRule()
-		customGrammar.add_rule(rule)
+        def _process_recognition(self, node, extras):
+            chosen = extras["option"]
 
-    threading.Timer(5, lastMod).start()
+            shell = Key("w-r")
+            shell.execute()
+            time.sleep(.1)
+            shell = Text(chosen)
+            shell.execute()
+            time.sleep(.1)
+            shell = Key("enter")
+            shell.execute()
+    customRule = mainRule()
+    if (customGrammar._rules):
+        print "working"
+        customGrammar.remove_rule(customGrammar._rules[0])
+    #global datelastMod
+    #newDateLastMod = time.ctime(os.path.getmtime("C:\Users\Dustin\Documents\GitHub\VILAN\customCommands.dat"))
+    #if newDateLastMod is not datelastMod:
+    customGrammar.add_rule(customRule)
+    #datelastMod = newDateLastMod
+    threading.Timer(1, lastMod).start()
 
 lastMod()

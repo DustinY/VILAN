@@ -27,7 +27,7 @@ grammarWrapper = engine._load_grammar(grammar)
 gmailGrammarWrapper = engine._load_grammar(gmailGrammar)
 bookmarkGrammarWrapper = engine._load_grammar(bookmarkGrammar)
 allGrammarWrapper = engine._load_grammar(allGrammar)
-customGrammarWrapper = engine._load-grammar(customGrammarWrapper)
+customGrammarWrapper = engine._load_grammar(customGrammar)
 #stopGrammarWrapper = engine._load_grammar(stopGrammar)
 #self.grammar.process_begin(window.executable, window.title, window.handle
 

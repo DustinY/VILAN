@@ -14,7 +14,9 @@ class navigationalRule(MappingRule):
 		"left" : Key("left"),
 		"right" : Key("right"),
 		"enter" : Key("enter"),
+		"delete" : Key("delete"),
 		"tab" : Key("tab"),
+		"tab back" : Key("s-tab"),
 	}
 rule = navigationalRule()
 class openRule(CompoundRule):
@@ -66,7 +68,7 @@ class openRule(CompoundRule):
 
 class turnOffRule(CompoundRule):
 	spec = "turn off"
-	extras = None
+	extras = []
 	def _process_recognition(self, node, extras):
 		grammar.disable()
 		gmailGrammar.disable()
@@ -74,15 +76,18 @@ class turnOffRule(CompoundRule):
 		allGrammar.disable()
 		stopGrammar.enable()
 
-class shutOffRule(compoundRule):
+class shutOffRule(CompoundRule):
 	spec = "shut off program"
-	extras = None
+	extras = []
 	def _process_recognition(self, node, extras):
+		global loopCheck
 		loopCheck = False
 
 rule = navigationalRule()
 allGrammar.add_rule(rule)
 rule = openRule()
 allGrammar.add_rule(rule)
-rule = shufOffRule()
+rule = turnOffRule()
+allGrammar.add_rule(rule)
+rule = shutOffRule()
 allGrammar.add_rule(rule)

@@ -10,62 +10,28 @@ loopCheck = True
 
 class navigationalRule(MappingRule):
 	mapping = {
+		"delete" : Key("delete"),
 		"down" : Key("down"),
-		"up" : Key("up"),
+		"enter" : Key("enter"),
 		"left" : Key("left"),
 		"right" : Key("right"),
-		"enter" : Key("enter"),
-		"delete" : Key("delete"),
 		"tab" : Key("tab"),
 		"tab back" : Key("s-tab"),
+		"up" : Key("up"),
 	}
-rule = navigationalRule()
-class openRule(CompoundRule):
-	spec = "open <option>"
-	extras = [Choice("option", {
-		"chrome":"chrome",
-		"browser":"chrome",
-		"email":"www.gmail.com",
-		"the mail":"www.gmail.com",
-		"gmail":"www.gmail.com",
-		"bookmarks":"bookmarks",
-		"last tab":"last",
-		"history":"history",
-		"downloads":"downloads"
-		}
-		)
-		]
-	def _process_recognition(self, node, extras):
-		chosen = extras["option"]
-		if (chosen == "bookmarks"):
-			BringApp("chrome").execute()
-			time.sleep(.1)
-			shell = Key("cs-o")
-			shell.execute()
-		elif (chosen == "last"):
-			BringApp("chrome").execute()
-			time.sleep(.1)
-			shell = Key("cs-t")
-			shell.execute()
-		elif (chosen == "history"):
-			BringApp("chrome").execute()
-			time.sleep(.1)
-			shell = Key("c-h")
-			shell.execute()
-		elif (chosen == "downloads"):
-			BringApp("chrome").execute()
-			time.sleep(.1)
-			shell = Key("c-j")
-			shell.execute()
-		else:
-			shell = Key("w-r")
-			shell.execute()
-			time.sleep(.1)
-			shell = Text(chosen)
-			shell.execute()
-			time.sleep(.1)
-			shell = Key("enter")
-			shell.execute()
+
+class openRule(MappingRule):
+	mapping = {
+		"open bookmarks": Key("cs-o"),
+		"open browser": Key("w-r/25") + Text("chrome") + Key("enter"),
+		"open chrome": Key("w-r/25") + Text("chrome") + Key("enter"),
+		"open downloads": Key("c-j"),
+		"open email": Key("w-r/25") + Text("www.gmail.com") + Key("enter"),
+		"open gmail": Key("w-r/25") + Text("www.gmail.com") + Key("enter"),
+		"open last tab": Key("cs-t"),
+		"open history": Key("c-h"),
+		"open the mail": Key("w-r/25") + Text("www.gmail.com") + Key("enter"),
+	}
 
 class turnOffRule(CompoundRule):
 	spec = "turn off"

@@ -50,13 +50,15 @@ class Vilan():
 
 start = Vilan()
 start.run()
-'''grammar.enable()
+'''
+grammar.enable()
 gmailGrammar.disable()
 bookmarkGrammar.disable()
 allGrammar.enable()
 stopGrammar.disable()
 '''
-'''engine.activate_grammar(grammar)
+'''
+engine.activate_grammar(grammar)
 engine.deactivate_grammar(gmailGrammar)
 engine.deactivate_grammar(bookmarkGrammar)
 engine.activate_grammar(allGrammar)

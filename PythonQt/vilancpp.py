@@ -1,4 +1,5 @@
 import vilan
+import signupcpp
 from signupcpp import *
 import sys
 from vilan import *
@@ -72,8 +73,10 @@ class VILAN(QtWidgets.QMainWindow, Ui_VILAN):
     #start on_pushButton_2_clicked
     def on_pushButton_2_clicked(self) :
         #self.hide()
+        signupWindow = QtWidgets.QDialog()
         signupRun = SignUp()
         signupRun.show()
+        signupWindow.exec_()
 
     #end on_pushButton_2_clicked
 '''run = VILAN()

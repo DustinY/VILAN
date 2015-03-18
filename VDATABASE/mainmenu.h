@@ -7,6 +7,7 @@
 #include "search.h"
 #include "display.h"
 #include "about.h"
+#include "commands.h"
 
 namespace Ui {
 class MainMenu;
@@ -34,6 +35,8 @@ private slots:
 
     void on_pushButton_about_clicked();
 
+    void on_pushButton_commands_clicked();
+
 private:
     Ui::MainMenu *ui;
     Modify *myModify;
@@ -41,6 +44,7 @@ private:
     Search *mySearch;
     Display *myDisplay;
     About *myAbout;
+    commands *myCommands;
 };
 
 #endif // MAINMENU_H

@@ -25,8 +25,15 @@ class browserNavigation(MappingRule):
 		"close tab" : Key("c-w"),
 		"close chrome" : Key("a-f4"),
 		"close browser": Key("a-f4"),
-
+		"click <option>" : Key("c-f/25") + Text("%(option)s\n") + Key("escape/25,enter"),
+		"find <option>" : Key("c-f/25") + Text("%(option)s\n"),
+		"select" : Key("escape/25, enter"),
+		"next" : Key("c-g"),
+		"previous" : Key("cs-g"),
 	}
+	extras = [
+        Dictation("option"),
+    ]
 
 rule = browserNavigation()
 grammar.add_rule(rule)

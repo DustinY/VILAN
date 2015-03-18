@@ -26,7 +26,7 @@ Dialog::~Dialog()
 
 void Dialog::display()
 {
-    QFile file("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/Methods.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.txt");
     if(!file.open(QIODevice::ReadOnly))
     QMessageBox::information(0, "info", file.errorString());
     QTextStream in(&file);
@@ -55,7 +55,7 @@ void Dialog::on_pushButton_clicked()
 
              if (reply == QMessageBox::Yes) {
                qDebug() << "Command Added";
-               QFile file("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/users.txt");
+               QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/Methods.txt");
                if ( file.open(QFile::WriteOnly | QFile::Append ))
                        {
                            file.seek(file.size());

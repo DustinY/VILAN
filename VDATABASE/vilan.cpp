@@ -34,14 +34,14 @@ void VILAN::on_pushButton_clicked()
     QString user, pass;
 
     //READ USERNAMES
-    QFile file("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/users.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/users.txt");
      if(!file.open(QIODevice::ReadOnly))
      QMessageBox::information(0, "info", file.errorString());
      QTextStream in(&file);
      user = in.readAll();
      file.close();
 
-     QFile file2("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/passwords.txt");
+     QFile file2("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/passwords.txt");
       if(!file2.open(QIODevice::ReadOnly))
       QMessageBox::information(0, "info", file2.errorString());
       QTextStream in2(&file2);

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>659</width>
-    <height>508</height>
+    <width>679</width>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QPushButton" name="pushButton_add">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>10</y>
-      <width>171</width>
-      <height>91</height>
+      <x>330</x>
+      <y>20</y>
+      <width>251</width>
+      <height>69</height>
      </rect>
     </property>
     <property name="font">
@@ -31,20 +31,25 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(33, 152, 175);</string>
+     <string notr="true">text-align: left;
+color: rgb(33, 152, 175);
+</string>
     </property>
     <property name="text">
      <string>ADD</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>Docs/Ubuntu_Studio-icon-pd2.png</normaloff>Docs/Ubuntu_Studio-icon-pd2.png</iconset>
+      <normaloff>Docs/ico.png</normaloff>Docs/ico.png</iconset>
     </property>
     <property name="iconSize">
      <size>
       <width>70</width>
       <height>70</height>
      </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
     </property>
     <property name="flat">
      <bool>true</bool>
@@ -53,10 +58,10 @@
    <widget class="QPushButton" name="pushButton_modify">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>100</y>
-      <width>201</width>
-      <height>81</height>
+      <x>330</x>
+      <y>90</y>
+      <width>251</width>
+      <height>69</height>
      </rect>
     </property>
     <property name="font">
@@ -67,14 +72,15 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(33, 152, 175);</string>
+     <string notr="true">text-align: left;
+color: rgb(33, 152, 175);</string>
     </property>
     <property name="text">
      <string>MODIFY</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>Docs/Ubuntu_Studio-icon-pd2.png</normaloff>Docs/Ubuntu_Studio-icon-pd2.png</iconset>
+      <normaloff>Docs/ico.png</normaloff>Docs/ico.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -89,10 +95,10 @@
    <widget class="QPushButton" name="pushButton_search">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>180</y>
-      <width>191</width>
-      <height>81</height>
+      <x>330</x>
+      <y>160</y>
+      <width>251</width>
+      <height>69</height>
      </rect>
     </property>
     <property name="font">
@@ -103,14 +109,15 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(33, 152, 175);</string>
+     <string notr="true">text-align: left;
+color: rgb(33, 152, 175);</string>
     </property>
     <property name="text">
      <string>SEARCH</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>Docs/Ubuntu_Studio-icon-pd2.png</normaloff>Docs/Ubuntu_Studio-icon-pd2.png</iconset>
+      <normaloff>Docs/ico.png</normaloff>Docs/ico.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -125,10 +132,10 @@
    <widget class="QPushButton" name="pushButton_display">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>270</y>
-      <width>201</width>
-      <height>71</height>
+      <x>330</x>
+      <y>300</y>
+      <width>251</width>
+      <height>69</height>
      </rect>
     </property>
     <property name="font">
@@ -139,14 +146,15 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(33, 152, 175);</string>
+     <string notr="true">text-align: left;
+color: rgb(33, 152, 175);</string>
     </property>
     <property name="text">
      <string>DISPLAY</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>Docs/Ubuntu_Studio-icon-pd2.png</normaloff>Docs/Ubuntu_Studio-icon-pd2.png</iconset>
+      <normaloff>Docs/ico.png</normaloff>Docs/ico.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -161,10 +169,10 @@
    <widget class="QPushButton" name="pushButton_about">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>350</y>
-      <width>171</width>
-      <height>71</height>
+      <x>330</x>
+      <y>370</y>
+      <width>251</width>
+      <height>69</height>
      </rect>
     </property>
     <property name="font">
@@ -175,14 +183,15 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(33, 152, 175);</string>
+     <string notr="true">text-align: left;
+color: rgb(33, 152, 175);</string>
     </property>
     <property name="text">
      <string>ABOUT</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>Docs/Ubuntu_Studio-icon-pd2.png</normaloff>Docs/Ubuntu_Studio-icon-pd2.png</iconset>
+      <normaloff>Docs/ico.png</normaloff>Docs/ico.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -197,10 +206,10 @@
    <widget class="QPushButton" name="pushButton_6">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>430</y>
-      <width>151</width>
-      <height>71</height>
+      <x>330</x>
+      <y>440</y>
+      <width>251</width>
+      <height>69</height>
      </rect>
     </property>
     <property name="font">
@@ -211,14 +220,75 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(33, 152, 175);</string>
+     <string notr="true">text-align: left;
+color: rgb(33, 152, 175);</string>
     </property>
     <property name="text">
      <string>EXIT</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>Docs/Ubuntu_Studio-icon-pd2.png</normaloff>Docs/Ubuntu_Studio-icon-pd2.png</iconset>
+      <normaloff>Docs/ico.png</normaloff>Docs/ico.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>70</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_date">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>291</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(1, 170, 216);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Date Label&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_commands">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>230</y>
+      <width>251</width>
+      <height>69</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">text-align: left;
+color: rgb(33, 152, 175);</string>
+    </property>
+    <property name="text">
+     <string>COMMANDS</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Docs/ico.png</normaloff>Docs/ico.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -235,36 +305,13 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>661</width>
-      <height>511</height>
+      <width>691</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-image: url(&quot;C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/background.jpg&quot;);</string>
+     <string notr="true">background-image: url(&quot;C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/background.jpg&quot;);</string>
     </property>
-    <widget class="QLabel" name="label_date">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>181</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>14</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(1, 170, 216);</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:400; color:#ffffff;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
    </widget>
    <zorder>widget</zorder>
    <zorder>pushButton_add</zorder>
@@ -273,6 +320,8 @@
    <zorder>pushButton_display</zorder>
    <zorder>pushButton_about</zorder>
    <zorder>pushButton_6</zorder>
+   <zorder>label_date</zorder>
+   <zorder>pushButton_commands</zorder>
   </widget>
  </widget>
  <resources/>

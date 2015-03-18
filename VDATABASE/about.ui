@@ -16,10 +16,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>140</x>
      <y>70</y>
-     <width>261</width>
-     <height>51</height>
+     <width>301</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -64,7 +64,7 @@
     <rect>
      <x>320</x>
      <y>380</y>
-     <width>121</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
@@ -77,12 +77,12 @@
     <rect>
      <x>320</x>
      <y>350</y>
-     <width>121</width>
+     <width>241</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Vicken Krikorian&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Vicken &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;Sarkis&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt; Krikorian&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
@@ -108,7 +108,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(&quot;C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/background.jpg&quot;);</string>
+    <string notr="true">background-image: url(&quot;C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/background.jpg&quot;);</string>
    </property>
   </widget>
   <zorder>widget</zorder>

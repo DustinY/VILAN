@@ -24,7 +24,7 @@ Display::~Display()
 //Display the default list of commands
 void Display::displayList()
 {
-    QFile file("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/Methods.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/Methods.txt");
     if(!file.open(QIODevice::ReadOnly))
     QMessageBox::information(0, "info", file.errorString());
     QTextStream in(&file);
@@ -35,7 +35,7 @@ void Display::displayList()
 //Display the custom list of commands
 void Display::displayList2()
 {
-    QFile file("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/Methods.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.dat");
     if(!file.open(QIODevice::ReadOnly))
     QMessageBox::information(0, "info", file.errorString());
     QTextStream in(&file);

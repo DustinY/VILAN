@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     search.cpp \
     display.cpp \
     about.cpp \
-    signup.cpp
+    signup.cpp \
+    commands.cpp
 
 HEADERS  += vilan.h \
     dialog.h \
@@ -29,7 +30,8 @@ HEADERS  += vilan.h \
     search.h \
     display.h \
     about.h \
-    signup.h
+    signup.h \
+    commands.h
 
 FORMS    += vilan.ui \
     dialog.ui \
@@ -38,4 +40,5 @@ FORMS    += vilan.ui \
     search.ui \
     display.ui \
     about.ui \
-    signup.ui
+    signup.ui \
+    commands.ui

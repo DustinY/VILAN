@@ -23,12 +23,10 @@ Search::~Search()
     delete ui;
 }
 
-
-
 void Search::on_pushButton_search_clicked()
 {
     //Load the file
-    QFile file("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/Methods.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/Methods.txt");
        if(!file.open(QIODevice::ReadOnly))
        QMessageBox::information(0, "info", file.errorString());
        QTextStream in(&file);
@@ -42,7 +40,6 @@ void Search::on_pushButton_search_clicked()
        QString com = doc->toPlainText();
        QStringList breakCom = com.split("\n");
 
-
        //Get command to search for
        QString match;
        match = ui->lineEdit->text();
@@ -54,12 +51,12 @@ void Search::on_pushButton_search_clicked()
              table.push_front(breakCom.at(i));
          }
      }
-    //Check the Vector
-    for(int i=0; i<table.size(); i++)
-    {
-            ui->textBrowser_2->setText(table.at(i));
-    }
 
+     for(int x=0; x<table.size(); x++){
+
+         ui->textBrowser_2->setText(table.at(x));
+
+     }
 }
 
 void Search::on_pushButton_2_clicked()

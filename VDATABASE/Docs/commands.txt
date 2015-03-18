@@ -1,0 +1,65 @@
+F1                               Display Help
+Ctrl+C (or Ctrl+Insert)   Copy the selected item
+Ctrl+X                         Cut the selected item
+Ctrl+V (or Shift+Insert)  Paste the selected item
+Ctrl+Z                         Undo an action
+Ctrl+Y                         Redo an action
+Delete (or Ctrl+D)         Delete the selected item and move it to the Recycle Bin
+Shift+Delete                Delete the selected item without moving it to the Recycle Bin first
+F2                               Rename the selected item
+Ctrl+Right Arrow           Move the cursor to the beginning of the next word
+Ctrl+Left Arrow             Move the cursor to the beginning of the previous word
+Ctrl+Down Arrow           Move the cursor to the beginning of the next paragraph
+Ctrl+Up Arrow               Move the cursor to the beginning of the previous paragraph
+Ctrl+Shift with an arrow key  Select a block of text
+Ctrl with any arrow key+Spacebar Select multiple individual items in a window or on the desktop
+Ctrl+A Select all items in a document or window
+F3                               Search for a file or folder
+Alt+Enter                     Display properties for the selected item
+Alt+F4                         Close the active item, or exit the active program
+Alt+Spacebar                Open the shortcut menu for the active window
+Ctrl+F4                        Close the active document 
+Alt+Tab                       Switch between open items
+Ctrl+Alt+Tab                Use the arrow keys to switch between open items
+Ctrl+Mouse scroll wheel
+Change the size of icons on the desktop
+Windows logo key Picture of Windows logo key +Tab
+Cycle through programs on the taskbar by using Aero Flip 3-D
+Ctrl+Windows logo key Picture of Windows logo key +Tab
+Use the arrow keys to cycle through programs on the taskbar by using Aero Flip 3-D
+Alt+Esc
+Cycle through items in the order in which they were opened
+F6
+Cycle through screen elements in a window or on the desktop
+F4
+Display the address bar list in Windows Explorer
+Shift+F10
+Display the shortcut menu for the selected item
+Ctrl+Esc
+Open       the Start menu
+Alt+underlined letter
+Display the corresponding menu
+Alt+underlined letter
+Perform the menu command (or other underlined command)
+F10
+Activate the menu bar in the active program
+Right Arrow
+Open the next menu to the right, or open a submenu
+Left Arrow
+Open the next menu to the left, or close a submenu
+F5 (or Ctrl+R)
+Refresh the active window
+Alt+Up Arrow
+View the folder one level up in Windows Explorer
+Esc
+Cancel the current task
+Ctrl+Shift+Esc
+Open Task Manager
+Shift when you insert a CD
+Prevent the CD from automatically playing
+Left Alt+Shift
+Switch the input language when multiple input languages are enabled
+Ctrl+Shift
+Switch the keyboard layout when multiple keyboard layouts are enabled
+Right or Left Ctrl+Shift
+Change the reading direction of text in right-to-left reading languages

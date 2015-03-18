@@ -18,6 +18,7 @@ MainMenu::MainMenu(QWidget *parent) :
      connect(ui->pushButton_search, SIGNAL(click()), this, SLOT(on_pushButton_search_clicked()));
      connect(ui->pushButton_display, SIGNAL(click()), this, SLOT(on_pushButton_display_clicked()));
      connect(ui->pushButton_about, SIGNAL(click()), this, SLOT(on_pushButton_about_clicked()));
+     connect(ui->pushButton_commands, SIGNAL(click()), this, SLOT(on_pushButton_commands_clicked()));
      ui->label_date->setText(QDate::currentDate().toString("ddd MMMM d yyyy"));
 }
 
@@ -56,9 +57,15 @@ void MainMenu::on_pushButton_display_clicked()
     myDisplay = new Display();
     myDisplay->show();
 }
-
 void MainMenu::on_pushButton_about_clicked()
 {
    myAbout = new About();
    myAbout->show();
+}
+
+
+void MainMenu::on_pushButton_commands_clicked()
+{
+    myCommands = new commands();
+    myCommands->show();
 }

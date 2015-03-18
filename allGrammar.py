@@ -1,3 +1,4 @@
+import os
 from dragonfly import *
 import pythoncom
 import win32com.client
@@ -76,12 +77,12 @@ class turnOffRule(CompoundRule):
 		allGrammar.disable()
 		stopGrammar.enable()
 
+
 class shutOffRule(CompoundRule):
-	spec = "shut off program"
+	spec = "end program"
 	extras = []
 	def _process_recognition(self, node, extras):
-		global loopCheck
-		loopCheck = False
+		os.system("taskkill /f /im python.exe")
 
 rule = navigationalRule()
 allGrammar.add_rule(rule)

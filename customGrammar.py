@@ -42,7 +42,8 @@ def create_dict_from_file(filename):
 #customGrammar.add_rule(customRule)
 
 def lastMod():
-    customCommands = create_dict_from_file("C:\Users\Dustin\Documents\GitHub\VILAN\customCommands.dat")
+    customCommands = create_dict_from_file("C:\Users\Dustin\Documents\GitHub\VILAN\VDATABASE\DOCS\customCommands.dat")
+    print customCommands
     class mainRule(CompoundRule):
         spec = "open <option>"
         extras = [Choice("option", customCommands)]
@@ -59,9 +60,8 @@ def lastMod():
             shell = Key("enter")
             shell.execute()
     customRule = mainRule()
-    if (customGrammar._rules):
-        print "working"
-        customGrammar.remove_rule(customGrammar._rules[0])
+    if (customGrammar.rules):
+        customGrammar.remove_rule(customGrammar.rules[0])
     #global datelastMod
     #newDateLastMod = time.ctime(os.path.getmtime("C:\Users\Dustin\Documents\GitHub\VILAN\customCommands.dat"))
     #if newDateLastMod is not datelastMod:

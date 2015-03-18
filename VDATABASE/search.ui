@@ -79,15 +79,15 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(&quot;C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/background.jpg&quot;);</string>
+    <string notr="true">background-image: url(&quot;C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/background.jpg&quot;);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>40</x>
      <y>60</y>
-     <width>121</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>

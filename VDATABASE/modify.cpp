@@ -27,7 +27,7 @@ Modify::~Modify()
 
 void Modify::displayList()
 {
-    QFile file("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/Methods.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.dat");
       if(!file.open(QIODevice::ReadOnly))
       QMessageBox::information(0, "info", file.errorString());
       QTextStream in(&file);
@@ -43,7 +43,7 @@ void Modify::on_pushButton_save_clicked()
 
 
     //Write the text again into the file.
-    QFile file("C:/Users/Dustin/Documents/School/CSULA/CS 437/VDATABASE/Docs/Methods.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.dat");
     if ( file.open(QFile::WriteOnly | QFile::Text ))
             {
         QTextStream stream( &file );

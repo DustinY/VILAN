@@ -22,14 +22,15 @@ class navigationalRule(MappingRule):
 
 class openRule(MappingRule):
 	mapping = {
-		"open bookmarks": Key("cs-o"),
+		"open bookmarks": BringApp("chrome") + Key("cs-o"),
 		"open browser": Key("w-r/25") + Text("chrome") + Key("enter"),
 		"open chrome": Key("w-r/25") + Text("chrome") + Key("enter"),
-		"open downloads": Key("c-j"),
+		"open downloads": BringApp("chrome") + Key("c-j"),
 		"open email": Key("w-r/25") + Text("www.gmail.com") + Key("enter"),
 		"open gmail": Key("w-r/25") + Text("www.gmail.com") + Key("enter"),
-		"open last tab": Key("cs-t"),
-		"open history": Key("c-h"),
+		"open last tab": BringApp("chrome") + Key("cs-t"),
+		"open [new] tab": BringApp("chrome") + Key("c-t"),
+		"open history": BringApp("chrome") + Key("c-h"),
 		"open the mail": Key("w-r/25") + Text("www.gmail.com") + Key("enter"),
 	}
 

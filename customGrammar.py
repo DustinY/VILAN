@@ -22,7 +22,8 @@ def create_dict_from_file(filename):
 #datelastMod = time.ctime(os.path.getmtime("C:\Users\Dustin\Documents\GitHub\VILAN\customCommands.dat"))
 #customCommands = create_dict_from_file("C:\Users\Dustin\Documents\GitHub\VILAN\customCommands.dat")
 
-'''class mainRule(CompoundRule):
+'''
+class mainRule(CompoundRule):
     spec = "open <option>"
     extras = [Choice("option", customCommands)]
 

@@ -18,6 +18,7 @@ All Grammar
   -open email - Opens www.gmail.com
   -open gmail - Opens www.gmail.com
   -open last tab - Opens the last closed tab
+  -open [new] tab - Opens a new tab
   -open history - Opens Chrome's History tab
   -open the mail - Opens www.gmail.com
 -Turn off Rule
@@ -178,6 +179,7 @@ All Grammars
   -open gmail - Opens www.gmail.com
   -open history - Opens Chrome's History tab
   -open last tab - Opens the last closed tab
+  -open [new] tab - Opens a new tab
   -open the mail - Opens www.gmail.com
   -Organize - Goes to organize option
   -previous - Goes to previous instance of find

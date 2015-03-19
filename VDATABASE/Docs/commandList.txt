@@ -1,0 +1,218 @@
+Vilan Commands
+
+All Grammar
+-Navigational Rule (Not really meant for anything specific)
+  -delete - delete key
+  -down - down arrow
+  -enter - enter key
+  -left - left arrow
+  -right - right arrow
+  -tab - tab key
+  -tab back - shift tab
+  -up - up arrow
+-Open Rule
+  -open bookmarks - Opens Chrome's Bookmarks tab
+  -open browser - Opens Chrome
+  -open chrome - Opens Chrome
+  -open downloads - Opens Chrome's Downloads tab
+  -open email - Opens www.gmail.com
+  -open gmail - Opens www.gmail.com
+  -open last tab - Opens the last closed tab
+  -open [new] tab - Opens a new tab
+  -open history - Opens Chrome's History tab
+  -open the mail - Opens www.gmail.com
+-Turn off Rule
+  -turn off - Turns off grammars
+-Shut off Rule
+  -end program - Closes VILAN
+
+Stop Grammar
+  -turn on - Turns on grammars
+
+Bookmark Grammar
+  -Bookmarks - Goes to bookmarks
+  -Folder Options - Opens folder options for Selected folder
+  -Folders - Goes to Folders
+  -Organize - Goes to organize option
+  -Search - Opens Bookmark Search
+  -Select bookmark - Selects a bookmark to open
+  -type <text> - Types <text>
+
+Gmail Grammar
+  -archive current [e-mail] - Archives email being viewed
+  -archive - Archives selected email
+  -BCC - Goes to BCC section to add people
+  -CC - Goes to CC section to add people
+  -change label to <label> - Changes label to <label>
+  -chat with <person> - Opens chat with <person>
+  -compose [new] [mail] - Creates new email
+  -compose in new tab - Opens new tab to create email
+  -delete e-mail - Deletes selected email
+  -delete message - Deletes selected email
+  -email <recipient> - Creates new email to <recipient>
+  -escape - Goes back to clean gmail window
+  -focus main window -
+  -forward [e-mail] - Forwards selected email
+  -forward [e-mail] in new tab - Opens new tab to forward email
+  -from <sender> -
+  -label as <label> - Labels selected email as <label>
+  -label - Opens option to label selected email
+  -mark [as] important - Marks selected email as important
+  -mark [as] read - Marks selected email as read
+  -mark [as] unimportant - Marks selected email as unimportant
+  -mark [as] unread - Marks selected email as unread
+  -[mark] [report] [as] spam - Marks selected email as spam
+  -next e-mail - Goes to next email
+  -next message - Goes to next email
+  -next tab - Goes to next email tab
+  -open chat - Opens chat
+  -open - Opens selected email
+  -previous e-mail - Goes to previous email
+  -previous message - Goes to previous email
+  -previous tab - Goes to previous email tab
+  -remove - Removes selected conversation
+  -reply [to] all - Creates a reply email to all
+  -reply [to] all in new tab - Opens a new tab to reply email to all
+  -reply - Creates a reply email
+  -reply in new tab - Opens a new tab to reply
+  -return - Goes back
+  -save [draft] - Saves unsent email to drafts
+  -search email [for] <option> - Searches through email for <option>
+  -select e-mail - Selects email
+  -select message - Selects email
+  -send [message] -
+  -star [email] - Marks selected email as important
+  -type <text> - Types <text>
+  -undo - Un-does previous action
+  -update - Updates email list
+
+
+Main Grammar
+-Browser Navigation Rule
+  -click <option> - Searches webpage and selects <option>
+  -close browser - Closes Chrome Browser
+  -close chrome - Closes Chrome Browser
+  -close tab - Closes Chrome tab
+  -go back - Goes to previous page
+  -go backward - Goes to previous page
+  -go backwards - Goes to previous page
+  -go forward - Goes to next page
+  -go forwards - Goes to next page
+  -go front - Goes to next page
+  -go [to] home - Goes to home page
+  -go [to] [the] bottom - Goes to the bottom of the page
+  -go [to] [the] next page - Goes to next page
+  -go [to] [the] previous page - Goes to the previous page
+  -go [to] [the] top - Goes to the top of the page
+  -tab left - Goes to left tab
+  -tab right - Goes to right tab
+  -tab 1-8 - Goes to tab number
+-Search Navigation Rule
+  -find <option> - Finds all instances of <option> in the Webpage
+  -next - Goes to next instance of find
+  -previous - Goes to previous instance of find
+  -search [for] <opion> - Searches internet for <opion>
+  -select - Selects instance of find
+
+Pause Grammar
+  -start listening - Re-enables Voice Commands
+
+All Grammars
+  -[mark] [report] [as] spam - Marks selected email as spam
+  -archive - Archives selected email
+  -archive current [e-mail] - Archives email being viewed
+  -BCC - Goes to BCC section to add people
+  -Bookmarks - Goes to bookmarks
+  -CC - Goes to CC section to add people
+  -change label to <label> - Changes label to <label>
+  -chat with <person> - Opens chat with <person>
+  -click <option> - Searches webpage and selects <option>
+  -close browser - Closes Chrome Browser
+  -close chrome - Closes Chrome Browser
+  -close tab - Closes Chrome tab
+  -compose [new] [mail] - Creates new email
+  -compose in new tab - Opens new tab to create email
+  -delete - delete key
+  -delete e-mail - Deletes selected email
+  -delete message - Deletes selected email
+  -down - down arrow
+  -email <recipient> - Creates new email to <recipient>
+  -end program - Closes VILAN
+  -enter - enter key
+  -escape - Goes back to clean gmail window
+  -find <option> - Finds all instances of <option> in the Webpage
+  -focus main window -
+  -Folder Options - Opens folder options for Selected folder
+  -Folders - Goes to Folders
+  -forward [e-mail] - Forwards selected email
+  -forward [e-mail] in new tab - Opens new tab to forward email
+  -from <sender> -
+  -go [to] [the] bottom - Goes to the bottom of the page
+  -go [to] [the] next page - Goes to next page
+  -go [to] [the] previous page - Goes to the previous page
+  -go [to] [the] top - Goes to the top of the page
+  -go [to] home - Goes to home page
+  -go back - Goes to previous page
+  -go backward - Goes to previous page
+  -go backwards - Goes to previous page
+  -go forward - Goes to next page
+  -go forwards - Goes to next page
+  -go front - Goes to next page
+  -label - Opens option to label selected email
+  -label as <label> - Labels selected email as <label>
+  -left - left arrow
+  -mark [as] important - Marks selected email as important
+  -mark [as] read - Marks selected email as read
+  -mark [as] unimportant - Marks selected email as unimportant
+  -mark [as] unread - Marks selected email as unread
+  -next - Goes to next instance of find
+  -next e-mail - Goes to next email
+  -next message - Goes to next email
+  -next tab - Goes to next email tab
+  -open - Opens selected email
+  -open bookmarks - Opens Chrome's Bookmarks tab
+  -open browser - Opens Chrome
+  -open chat - Opens chat
+  -open chrome - Opens Chrome
+  -open downloads - Opens Chrome's Downloads tab
+  -open email - Opens www.gmail.com
+  -open gmail - Opens www.gmail.com
+  -open history - Opens Chrome's History tab
+  -open last tab - Opens the last closed tab
+  -open [new] tab - Opens a new tab
+  -open the mail - Opens www.gmail.com
+  -Organize - Goes to organize option
+  -previous - Goes to previous instance of find
+  -previous e-mail - Goes to previous email
+  -previous message - Goes to previous email
+  -previous tab - Goes to previous email tab
+  -remove - Removes selected conversation
+  -reply - Creates a reply email
+  -reply [to] all - Creates a reply email to all
+  -reply [to] all in new tab - Opens a new tab to reply email to all
+  -reply in new tab - Opens a new tab to reply
+  -return - Goes back
+  -right - right arrow
+  -save [draft] - Saves unsent email to drafts
+  -Search - Opens Bookmark Search
+  -search [for] <opion> - Searches internet for <opion>
+  -search email [for] <option> - Searches through email for <option>
+  -select - Selects instance of find
+  -Select bookmark - Selects a bookmark to open
+  -select e-mail - Selects email
+  -select message - Selects email
+  -send [message] -
+  -star [email] - Marks selected email as important
+  -start listening - Re-enables Voice Commands
+  -tab - tab key
+  -tab 1-8 - Goes to tab number
+  -tab back - shift tab
+  -tab left - Goes to left tab
+  -tab right - Goes to right tab
+  -turn off - Turns off grammars
+  -turn on - Turns on grammars
+  -type <text> - Types <text>
+  -type <text> - Types <text>
+  -undo - Un-does previous action
+  -up - up arrow
+  -update - Updates email list

@@ -23,7 +23,7 @@ commands::~commands()
 
 void commands::displayList()
 {
-    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/commands.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/commandList.txt");
     if(!file.open(QIODevice::ReadOnly))
         QMessageBox::information(0, "info", file.errorString());
     QFile file2("c:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/customCommands.dat");

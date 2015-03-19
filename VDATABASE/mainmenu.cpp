@@ -44,6 +44,8 @@ void MainMenu::on_pushButton_modify_clicked()
 void MainMenu::on_pushButton_6_clicked()
 {
     QApplication::quit();
+    //System("taskkill /f /im python.exe");
+    //System("C:\Python27\python C:\Users\Dustin\Documents\GitHub\VILAN\VilanDragonfly.pyw");
 }
 
 void MainMenu::on_pushButton_search_clicked()

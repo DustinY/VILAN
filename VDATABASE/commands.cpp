@@ -25,10 +25,17 @@ void commands::displayList()
 {
     QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/commands.txt");
     if(!file.open(QIODevice::ReadOnly))
-    QMessageBox::information(0, "info", file.errorString());
+        QMessageBox::information(0, "info", file.errorString());
+    QFile file2("c:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/customCommands.dat");
+    if(!file2.open(QIODevice::ReadOnly))
+        QMessageBox::information(0, "info", file2.errorString());
     QTextStream in(&file);
-    ui->textBrowser->setText(in.readAll());
-            file.close();
+    QTextStream in2(&file2);
+    QString allIn = in.readAll() + in2.readAll();
+    //ui->textBrowser->setText(in.readAll());
+    ui->textBrowser->setText(allIn);
+    file.close();
+    file2.close();
 }
 void commands::on_pushButton_display_clicked()
 {

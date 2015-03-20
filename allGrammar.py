@@ -49,7 +49,7 @@ class shutOffRule(CompoundRule):
 	spec = "end program"
 	extras = []
 	def _process_recognition(self, node, extras):
-		os.system("taskkill /f /im python.exe")
+		os.system("taskkill /f /im pythonw.exe")
 
 rule = navigationalRule()
 allGrammar.add_rule(rule)

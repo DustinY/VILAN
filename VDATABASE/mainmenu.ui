@@ -312,6 +312,19 @@ color: rgb(33, 152, 175);</string>
     <property name="styleSheet">
      <string notr="true">background-image: url(&quot;C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/background.jpg&quot;);</string>
     </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>410</y>
+       <width>131</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>START VILAN</string>
+     </property>
+    </widget>
    </widget>
    <zorder>widget</zorder>
    <zorder>pushButton_add</zorder>

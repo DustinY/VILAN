@@ -26,20 +26,22 @@ Search::~Search()
 void Search::on_pushButton_search_clicked()
 {
     //Load the file
-    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/Methods.txt");
-       if(!file.open(QIODevice::ReadOnly))
-       QMessageBox::information(0, "info", file.errorString());
-       QTextStream in(&file);
-       ui->textBrowser->setText(in.readAll());
-       file.close();
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/commandList.txt");
+    if(!file.open(QIODevice::ReadOnly))
+        QMessageBox::information(0, "info", file.errorString());
+    QFile file2("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.dat");
+    if(!file2.open(QIODevice::ReadOnly))
+        QMessageBox::information(0, "info", file2.errorString());
+    QTextStream in(&file);
+    QTextStream in2(&file2);
+    QString allText = in.readAll() + in2.readAll();
+    ui->textBrowser->setText(allText);
+    file.close();
+    file2.close();
 
        //Load list to a vector
        QVector<QString> table;
-
-       QTextDocument *doc = ui->textBrowser->document();
-       QString com = doc->toPlainText();
-       QStringList breakCom = com.split("\n");
-
+       QStringList breakCom = allText.split("\n");
        //Get command to search for
        QString match;
        match = ui->lineEdit->text();
@@ -51,12 +53,12 @@ void Search::on_pushButton_search_clicked()
              table.push_front(breakCom.at(i));
          }
      }
-
-     for(int x=0; x<table.size(); x++){
-
-         ui->textBrowser_2->setText(table.at(x));
-
+    QString foundCommands = "";
+    for(int x=0; x<table.size(); x++){
+        foundCommands += table.at(x) + "\n";
      }
+
+    ui->textBrowser_2->setText(foundCommands);
 }
 
 void Search::on_pushButton_2_clicked()

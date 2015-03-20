@@ -7,6 +7,8 @@
 #include "display.h"
 #include "about.h"
 #include <QTime>
+#include <stdlib.h>
+#include <windows.h>
 #include <QDate>
 MainMenu::MainMenu(QWidget *parent) :
     QMainWindow(parent),
@@ -43,9 +45,9 @@ void MainMenu::on_pushButton_modify_clicked()
 
 void MainMenu::on_pushButton_6_clicked()
 {
+    system("taskkill /f /im pythonw.exe");
+    system("C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw");
     QApplication::quit();
-    //System("taskkill /f /im python.exe");
-    //System("C:\Python27\python C:\Users\Dustin\Documents\GitHub\VILAN\VilanDragonfly.pyw");
 }
 
 void MainMenu::on_pushButton_search_clicked()
@@ -61,7 +63,7 @@ void MainMenu::on_pushButton_display_clicked()
 }
 void MainMenu::on_pushButton_about_clicked()
 {
-   myAbout = new About();
+   myAbout = new About();o
    myAbout->show();
 }
 
@@ -70,4 +72,12 @@ void MainMenu::on_pushButton_commands_clicked()
 {
     myCommands = new commands();
     myCommands->show();
+}
+
+void MainMenu::on_pushButton_clicked()
+{
+    //ShellExecute(0,0, "taskkill /f /im pythonw.exe",0,0,);e
+    system("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/programStart.bat");
+    //system("taskkill /f /im pythonw.exe & C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw & exit");
+
 }

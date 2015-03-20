@@ -14,6 +14,7 @@ commands::commands(QWidget *parent) :
     ui(new Ui::commands)
 {
     ui->setupUi(this);
+    displayList();
 }
 
 commands::~commands()
@@ -32,7 +33,6 @@ void commands::displayList()
     QTextStream in(&file);
     QTextStream in2(&file2);
     QString allIn = in.readAll() + in2.readAll();
-    //ui->textBrowser->setText(in.readAll());
     ui->textBrowser->setText(allIn);
     file.close();
     file2.close();

@@ -42,3 +42,5 @@ chrome, www.google.com
 
 
 dog,dog
+
+note,notepad

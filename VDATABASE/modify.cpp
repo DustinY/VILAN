@@ -10,6 +10,7 @@
 #include<QMimeData>
 #include<QClipboard>
 #include<QVector>
+#include<stdlib.h>
 
 Modify::Modify(QWidget *parent) :
     QDialog(parent),
@@ -25,6 +26,7 @@ Modify::~Modify()
 
 }
 
+
 void Modify::displayList()
 {
     QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.dat");
@@ -36,7 +38,7 @@ void Modify::displayList()
 }
 
 void Modify::on_pushButton_save_clicked()
-{
+{    
     //Get the text already in the textBrowser
     QTextDocument *doc = ui->textBrowser->document();
     QString html = doc->toPlainText();
@@ -50,7 +52,9 @@ void Modify::on_pushButton_save_clicked()
         stream<<html<<endl;
         file.flush();
         file.close();
-}
+    }
+    system("taskkill /f /im pythonw.exe");
+    system("C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw");
 }
 
 

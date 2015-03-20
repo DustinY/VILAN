@@ -37,6 +37,8 @@ private slots:
 
     void on_pushButton_commands_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainMenu *ui;
     Modify *myModify;

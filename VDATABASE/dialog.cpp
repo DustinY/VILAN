@@ -9,6 +9,7 @@
 #include<QMimeData>
 #include<QClipboard>
 #include<QVector>
+#include<stdlib.h>
 
 
 Dialog::Dialog(QWidget *parent) :
@@ -16,6 +17,7 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+    display();
     connect(ui->pushButton_5, SIGNAL(click()), this, SLOT(on_pushButton_5_clicked()));
 }
 
@@ -26,10 +28,10 @@ Dialog::~Dialog()
 
 void Dialog::display()
 {
-    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.dat");
     if(!file.open(QIODevice::ReadOnly))
-    QMessageBox::information(0, "info", file.errorString());
-    QTextStream in(&file);
+        QMessageBox::information(0, "info", file.errorString());
+    QTextStream in(&file);    
     ui->textBrowser->setText(in.readAll());
     file.close();
 }
@@ -55,14 +57,21 @@ void Dialog::on_pushButton_clicked()
 
              if (reply == QMessageBox::Yes) {
                qDebug() << "Command Added";
-               QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/Methods.txt");
+               QFile file2("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommandList.txt");
+               if (!file2.open(QFile::WriteOnly | QFile::Append ))
+                  QMessageBox::information(0, "info", file2.errorString());
+               QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/customCommands.dat");
                if ( file.open(QFile::WriteOnly | QFile::Append ))
                        {
                            file.seek(file.size());
                            QTextStream stream( &file );
-                           stream<<"\n"<<voice<<","<<command<<"\r"<<endl;
+                           QTextStream commandList(&file2);
+                           stream<<voice<<","<<command<<"\n";
+                           commandList << "-open " << voice << " - " << command << "\n";
                            file.flush();
+                           file2.flush();
                            file.close();
+                           file2.close();
                        }
                //If a new command was addded, reload list.
                 display();
@@ -70,7 +79,8 @@ void Dialog::on_pushButton_clicked()
                qDebug() << "Comment Canceled!";
              }
     }
-
+    system("taskkill /f /im pythonw.exe");
+    system("C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw");
 
 }
 

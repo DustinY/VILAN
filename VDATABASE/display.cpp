@@ -15,6 +15,8 @@ Display::Display(QWidget *parent) :
     ui(new Ui::Display)
 {
     ui->setupUi(this);
+    displayList();
+    displayList2();
 }
 
 Display::~Display()
@@ -24,12 +26,12 @@ Display::~Display()
 //Display the default list of commands
 void Display::displayList()
 {
-    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/Methods.txt");
+    QFile file("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/DOCS/commandList.txt");
     if(!file.open(QIODevice::ReadOnly))
     QMessageBox::information(0, "info", file.errorString());
     QTextStream in(&file);
     ui->textBrowser->setText(in.readAll());
-            file.close();
+    file.close();
 }
 
 //Display the custom list of commands
@@ -40,7 +42,7 @@ void Display::displayList2()
     QMessageBox::information(0, "info", file.errorString());
     QTextStream in(&file);
     ui->textBrowser_2->setText(in.readAll());
-            file.close();
+    file.close();
 }
 
 void Display::on_pushButton_clicked()

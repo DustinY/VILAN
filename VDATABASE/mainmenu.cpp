@@ -46,7 +46,8 @@ void MainMenu::on_pushButton_modify_clicked()
 void MainMenu::on_pushButton_6_clicked()
 {
     system("taskkill /f /im pythonw.exe");
-    system("C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw");
+    system("start C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw");
+    std::exit(0);
     QApplication::quit();
 }
 
@@ -63,7 +64,7 @@ void MainMenu::on_pushButton_display_clicked()
 }
 void MainMenu::on_pushButton_about_clicked()
 {
-   myAbout = new About();o
+   myAbout = new About();
    myAbout->show();
 }
 
@@ -76,8 +77,8 @@ void MainMenu::on_pushButton_commands_clicked()
 
 void MainMenu::on_pushButton_clicked()
 {
-    //ShellExecute(0,0, "taskkill /f /im pythonw.exe",0,0,);e
-    system("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/programStart.bat");
-    //system("taskkill /f /im pythonw.exe & C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw & exit");
+    system("taskkill /f /im pythonw.exe");
+    //system("C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/programStart.bat");
+    system("start C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw");
 
 }

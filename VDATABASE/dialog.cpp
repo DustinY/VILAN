@@ -79,9 +79,6 @@ void Dialog::on_pushButton_clicked()
                qDebug() << "Comment Canceled!";
              }
     }
-    system("taskkill /f /im pythonw.exe");
-    system("C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw");
-
 }
 
 void Dialog::on_pushButton_5_clicked()

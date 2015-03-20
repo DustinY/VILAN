@@ -21,6 +21,7 @@ class browserNavigation(MappingRule):
 		"go [to] [the] next page" : Key("a-right"),
 		"go [to] [the] previous page": Key("a-left"),
 		"go [to] [the] top": Key("home"),
+		"refresh" : Key("f5"),
 		"tab left": Key("cs-tab"),
 		"tab right": Key("c-tab"),
 		"tab one": Key("c-1"),
@@ -41,7 +42,7 @@ class SearchNavigation(MappingRule):
 		"find <option>" : Key("c-f/25") + Text("%(option)s\n"),
 		"next" : Key("c-g"),
 		"previous" : Key("cs-g"),
-		"search [for] <option>": Key("c-l") + Text("%(option)s\n"),
+		"search [for] <option>": Key("c-l/25") + Text("%(option)s\n"),
 		"select" : Key("escape/25, enter"),
 	}
 	extras = [

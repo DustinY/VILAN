@@ -53,8 +53,6 @@ void Modify::on_pushButton_save_clicked()
         file.flush();
         file.close();
     }
-    system("taskkill /f /im pythonw.exe");
-    system("C:/Python27/pythonw C:/Users/Dustin/Documents/GitHub/VILAN/VilanDragonfly.pyw");
 }
 
 

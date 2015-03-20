@@ -2,3 +2,8 @@
 -open test - taco
 -open try - tacos
 -open test - test
+-open firefox - firefox
+-open internet explorer - iexplore
+-open internet explorer - iexplore
+-open macias - www.google.com
+-open taco - www.tacobell.com

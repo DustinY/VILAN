@@ -49,13 +49,11 @@ class mainRule(MappingRule):
 		"select message" : Key("x"),
 		"send [message]" : Key("c-enter"),
 		"star [e-mail]" : Key("s"),
-		"type <text>" : Text("%(text)s"),
 		"undo" : Key("z"),
 		"update" : Key("s-n"),
 	}
 	extras = [
 			Dictation("recipient"),
-			Dictation("text"),
 			Dictation("option"),
 			Dictation("sender"),
 			Dictation("label"),

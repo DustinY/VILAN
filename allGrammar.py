@@ -18,7 +18,18 @@ class navigationalRule(MappingRule):
 		"tab" : Key("tab"),
 		"tab back" : Key("s-tab"),
 		"up" : Key("up"),
+		"type <text>" : Text("%(text)s"),
+		"backspace": Key("backspace"),
+		"back space" : Key("backspace"),
+		"select all" : Key("cs-a"),
+		"select previous" : Key("cs-left"),
+		"delete previous" : Key("cs-left, delete"),
+		"select next" : Key("cs-right"),
+		"edit commands" : Key("w-r/25") + Text("C:/Users/Dustin/Desktop/Demo/VDATABASE.exe") + Key("enter"),
 	}
+	extras=[
+		Dictation("text"),
+	]
 
 class openRule(MappingRule):
 	mapping = {

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>679</width>
-    <height>545</height>
+    <height>569</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pushButton_add">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>20</y>
+      <x>340</x>
+      <y>10</y>
       <width>251</width>
       <height>69</height>
      </rect>
@@ -58,7 +58,7 @@ color: rgb(33, 152, 175);
    <widget class="QPushButton" name="pushButton_modify">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>340</x>
       <y>90</y>
       <width>251</width>
       <height>69</height>
@@ -95,8 +95,8 @@ color: rgb(33, 152, 175);</string>
    <widget class="QPushButton" name="pushButton_search">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>160</y>
+      <x>340</x>
+      <y>170</y>
       <width>251</width>
       <height>69</height>
      </rect>
@@ -132,8 +132,8 @@ color: rgb(33, 152, 175);</string>
    <widget class="QPushButton" name="pushButton_display">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>300</y>
+      <x>340</x>
+      <y>330</y>
       <width>251</width>
       <height>69</height>
      </rect>
@@ -169,8 +169,8 @@ color: rgb(33, 152, 175);</string>
    <widget class="QPushButton" name="pushButton_about">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>370</y>
+      <x>340</x>
+      <y>400</y>
       <width>251</width>
       <height>69</height>
      </rect>
@@ -206,8 +206,8 @@ color: rgb(33, 152, 175);</string>
    <widget class="QPushButton" name="pushButton_6">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>440</y>
+      <x>340</x>
+      <y>480</y>
       <width>251</width>
       <height>69</height>
      </rect>
@@ -266,8 +266,8 @@ color: rgb(33, 152, 175);</string>
    <widget class="QPushButton" name="pushButton_commands">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>230</y>
+      <x>340</x>
+      <y>250</y>
       <width>251</width>
       <height>69</height>
      </rect>
@@ -278,6 +278,9 @@ color: rgb(33, 152, 175);</string>
       <weight>75</weight>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">text-align: left;
@@ -300,31 +303,48 @@ color: rgb(33, 152, 175);</string>
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>430</y>
+      <width>131</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Docs/started.png</normaloff>Docs/started.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>80</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>691</width>
-      <height>551</height>
+      <width>701</width>
+      <height>591</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">background-image: url(&quot;C:/Users/Dustin/Documents/GitHub/VILAN/VDATABASE/Docs/background.jpg&quot;);</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>410</y>
-       <width>131</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>START VILAN</string>
-     </property>
-    </widget>
+    <zorder>pushButton_display</zorder>
    </widget>
    <zorder>widget</zorder>
    <zorder>pushButton_add</zorder>
@@ -335,6 +355,7 @@ color: rgb(33, 152, 175);</string>
    <zorder>pushButton_6</zorder>
    <zorder>label_date</zorder>
    <zorder>pushButton_commands</zorder>
+   <zorder>pushButton</zorder>
   </widget>
  </widget>
  <resources/>
